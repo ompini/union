@@ -38,12 +38,16 @@ chmod +x uniond
 mv uniond $HOME/go/bin/
 ```
 
-# config and init app
+**config and init app**
+```
 uniond --home $HOME/.union init $MONIKER --chain-id union-testnet-8
+```
 
-# download genesis and addrbook
+**download genesis and addrbook**
+```
 wget -O $HOME/.union/config/genesis.json https://server-4.itrocket.net/testnet/union/genesis.json
 wget -O $HOME/.union/config/addrbook.json  https://server-4.itrocket.net/testnet/union/addrbook.json
+```
 
 # set seeds and peers
 SEEDS="2812a4ae3ebfba02973535d05d2bbcc80b7d215f@union-testnet-seed.itrocket.net:23656"
