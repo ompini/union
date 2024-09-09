@@ -92,7 +92,8 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.union/config/config.t
 sed -i -e "s/^indexer *=.*/indexer = \"null\"/" $HOME/.union/config/config.toml
 ```
 
-# create service file
+**create service file**
+```
 sudo tee /etc/systemd/system/uniond.service > /dev/null <<EOF
 [Unit]
 Description=Union node
@@ -107,6 +108,7 @@ LimitNOFILE=65535
 [Install]
 WantedBy=multi-user.target
 EOF
+```
 
 # reset and download snapshot
 uniond tendermint unsafe-reset-all --home $HOME/.union --home $HOME/.union
