@@ -156,8 +156,11 @@ source $HOME/.bash_profile
 uniond status 2>&1 | jq 
 ```
 
-# before creating a validator, you need to fund your wallet and check balance
-uniond query bank balances $WALLET_ADDRESS 
+**before creating a validator, you need to fund your wallet and check balance**
+```
+uniond query bank balances $WALLET_ADDRESS
+```
+
 Create validator
 Moniker
 Identity
